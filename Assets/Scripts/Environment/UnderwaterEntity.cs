@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class UnderwaterEntity : MonoBehaviour
+public class UnderwaterEntity : EnvironmentEntity
 {
     public Rigidbody2D rb2d { get; private set; }
 
-    public float vertSpeed = 1f;
+    public Vector2 defaultVelocity = Vector2.zero;
 
-    void Awake()
+    new void Awake()
     {
+        base.Awake();
+
         rb2d = GetComponent<Rigidbody2D>();
         rb2d.gravityScale = 0;
     }
@@ -18,7 +20,7 @@ public class UnderwaterEntity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb2d.velocity = Vector2.up * vertSpeed;
+        rb2d.velocity = defaultVelocity;
     }
 
     // Update is called once per frame
