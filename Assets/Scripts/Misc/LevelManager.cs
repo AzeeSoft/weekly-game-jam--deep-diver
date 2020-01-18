@@ -5,8 +5,15 @@ using UnityEngine;
 public class LevelManager : SingletonMonoBehaviour<LevelManager>
 {
     public float globalDiveSpeed => DiverModel.Instance.globalDiveSpeed;
+    public float curDepth => (environmentRoot.position.y - originalEnvironmentRootPos.y) * depthScalePerUnit;
 
+    public float depthScalePerUnit = 1f;
     public Transform environmentRoot;
+
+    private Vector3 originalEnvironmentRootPos = Vector3.zero;
+
+    private Dictionary<string, UnderwaterCreatureData>
+        allUnderwaterCreatureData = new Dictionary<string, UnderwaterCreatureData>();
 
     new void Awake()
     {
@@ -16,12 +23,13 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
         {
             Debug.LogError("Environment Root is not set");
         }
+
+        originalEnvironmentRootPos = environmentRoot.position;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
