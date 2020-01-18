@@ -573,6 +573,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.16
       objectReference: {fileID: 0}
+    - target: {fileID: 2747619653109654747, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747619653109654747, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 3615714415257408976, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -633,6 +643,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelEssentials
       objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: depthScalePerUnit
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3615714416937692352, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -667,6 +687,11 @@ PrefabInstance:
         type: 3}
       propertyPath: yOffset
       value: -3.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 5636124299648452319, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_Name
+      value: Line
       objectReference: {fileID: 0}
     - target: {fileID: 8965045076533177837, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}

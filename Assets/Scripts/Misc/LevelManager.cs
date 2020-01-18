@@ -5,10 +5,12 @@ using UnityEngine;
 public class LevelManager : SingletonMonoBehaviour<LevelManager>
 {
     public float globalDiveSpeed => DiverModel.Instance.globalDiveSpeed;
-    public float curDepth => (environmentRoot.position.y - originalEnvironmentRootPos.y) * depthScalePerUnit;
+    public int curDepth => (int)((environmentRoot.position.y - originalEnvironmentRootPos.y) * depthScalePerUnit);
 
     public float depthScalePerUnit = 1f;
     public Transform environmentRoot;
+
+    public List<OceanicZone> oceanicZones;
 
     private Vector3 originalEnvironmentRootPos = Vector3.zero;
 
