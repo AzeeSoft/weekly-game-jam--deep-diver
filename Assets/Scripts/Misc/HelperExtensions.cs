@@ -3,7 +3,32 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Cinemachine.Utility;
+using DG.Tweening;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+
+[Serializable]
+public class Sides
+{
+    public float left;
+    public float right;
+    public float up;
+    public float down;
+    public float forward;
+    public float back;
+}
+
+[Serializable]
+public class BoundSides
+{
+    public Vector3 left;
+    public Vector3 right;
+    public Vector3 up;
+    public Vector3 down;
+    public Vector3 forward;
+    public Vector3 back;
+}
 
 public static class HelperExtensions
 {
@@ -17,6 +42,24 @@ public static class HelperExtensions
     public static void WaitForFrameAndExecute(this MonoBehaviour self, Action action)
     {
         self.StartCoroutine(HelperUtilities.WaitForFrameAndExecute(action));
+    }
+
+    #endregion
+
+    #region GameObject
+    
+    public static Sequence DOFade(this GameObject obj, float endValue, float duration)
+    {
+        Sequence mySequence = DOTween.Sequence();
+
+        List<Graphic> graphics = new List<Graphic>(obj.GetComponentsInChildren<Graphic>(true));
+        foreach (var graphic in graphics)
+        {
+            var graphicTween = graphic.DOFade(endValue, duration);
+            mySequence.PrependCallback(() => graphic.DOKill()).Insert(0, graphicTween);
+        }
+
+        return mySequence;
     }
 
     #endregion
@@ -79,19 +122,9 @@ public static class HelperExtensions
 
     #region Bounds
 
-    public struct Sides
+    public static BoundSides GetSides(this Bounds obj, bool includePosition = true) 
     {
-        public Vector3 left;
-        public Vector3 right;
-        public Vector3 up;
-        public Vector3 down;
-        public Vector3 forward;
-        public Vector3 back;
-    }
-
-    public static Sides GetSides(this Bounds obj, bool includePosition = true) 
-    {
-        return new Sides()
+        return new BoundSides()
         {
             left = (includePosition ? obj.center : Vector3.zero) + (Vector3.left * obj.extents.x),
             right = (includePosition ? obj.center : Vector3.zero) + (Vector3.right * obj.extents.x),

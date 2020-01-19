@@ -7,7 +7,8 @@ public class UnderwaterEntity : EnvironmentEntity
 {
     public Rigidbody2D rb2d { get; private set; }
 
-    public Vector2 defaultVelocity = Vector2.zero;
+    public float speed = 0.9f;
+    public float speedModifier = 0.3f;
 
     new void Awake()
     {
@@ -20,12 +21,15 @@ public class UnderwaterEntity : EnvironmentEntity
     // Start is called before the first frame update
     void Start()
     {
-        rb2d.velocity = defaultVelocity;
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
 
+    public void SetMoveDirection(Vector3 dir)
+    {
+        rb2d.velocity = dir.normalized * (speed + Random.Range(-speedModifier, speedModifier));
     }
 }

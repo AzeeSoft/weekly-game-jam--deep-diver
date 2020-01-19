@@ -236,7 +236,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.6427877, y: -0.76604444, z: 0, w: 0.49999994}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -254,213 +254,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1001 &949360812
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -11.97
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.3262815
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909452, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7145034985210909453, guid: b4166de95ed86954f870f8e4682f76e3,
-        type: 3}
-      propertyPath: m_Name
-      value: Underwater Creature Test 2 Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b4166de95ed86954f870f8e4682f76e3, type: 3}
---- !u!1001 &1045150468
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4802928120020106942, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_Name
-      value: Underwater Creature Test 3 Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -9.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.3262815
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4802928120020106943, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 44d664017a6bdbb4ea02b0c5bf4cc856, type: 3}
---- !u!1001 &1794775535
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1364982592070929338, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_Name
-      value: Underwater Creature Test 1 Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -12.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -8.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.3262815
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1364982592070929339, guid: 469f17824c2a9c0468325c67524fa229,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 469f17824c2a9c0468325c67524fa229, type: 3}
 --- !u!1 &2029529895
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +366,31 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -3.16
       objectReference: {fileID: 0}
+    - target: {fileID: 697110178817305098, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 697110178817305098, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 697110178817305098, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 697110178817305098, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 697110178817305098, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2747619653109654747, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -650,8 +468,134 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
       propertyPath: depthScalePerUnit
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].depth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].depth
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].depth
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].name
+      value: Zone 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].name
+      value: Zone 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].name
+      value: Zone 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8882ea3c120e34b45a3c519a98ab3b31,
+        type: 2}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ec9f04930da51cf4ead348d1c10804f1,
+        type: 2}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: edfc99bdaf864494eb88f27ed9a220df,
+        type: 2}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8882ea3c120e34b45a3c519a98ab3b31,
+        type: 2}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ec9f04930da51cf4ead348d1c10804f1,
+        type: 2}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8882ea3c120e34b45a3c519a98ab3b31,
+        type: 2}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatureMaxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatureSpawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatureSpawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatureMaxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatureSpawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatureSpawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatureMaxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatureSpawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatureSpawnIntervalModifier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416937692352, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}

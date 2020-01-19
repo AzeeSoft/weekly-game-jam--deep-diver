@@ -17,10 +17,15 @@ PrefabInstance:
       propertyPath: defaultVelocity.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4251364832312435334, guid: 662bf320dfdcedb4895358e9b2902b34,
+        type: 3}
+      propertyPath: speed
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 4251364832312435336, guid: 662bf320dfdcedb4895358e9b2902b34,
         type: 3}
       propertyPath: m_Name
-      value: Underwater Creature Test 3
+      value: Underwater Creature Test 3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4251364832312435337, guid: 662bf320dfdcedb4895358e9b2902b34,
         type: 3}

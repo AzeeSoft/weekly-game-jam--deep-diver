@@ -334,52 +334,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
-        type: 2}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_text
-      value: 11,000 m
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6708990458298816294, guid: 87cc30b606b229d47b624f572c291c97,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87cc30b606b229d47b624f572c291c97, type: 3}
 --- !u!224 &3724326848518294538 stripped

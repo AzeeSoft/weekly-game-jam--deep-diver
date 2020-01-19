@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3907449411264788167}
   - component: {fileID: 3907449411264788164}
+  - component: {fileID: 1418971433515536459}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -46,3 +47,23 @@ MonoBehaviour:
   depthScalePerUnit: 100
   environmentRoot: {fileID: 0}
   oceanicZones: []
+  curOceanicZoneIndex: 0
+--- !u!114 &1418971433515536459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907449411264788166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65b5395cb387fb4d9718bc2f8850469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnAreaPadding:
+    left: 1
+    right: 1
+    up: 0
+    down: 5
+    forward: 0
+    back: 0

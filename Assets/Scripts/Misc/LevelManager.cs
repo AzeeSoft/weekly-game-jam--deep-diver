@@ -1,21 +1,32 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LevelManager : SingletonMonoBehaviour<LevelManager>
 {
     public float globalDiveSpeed => DiverModel.Instance.globalDiveSpeed;
-    public int curDepth => (int)((environmentRoot.position.y - originalEnvironmentRootPos.y) * depthScalePerUnit);
+    public int curDepth => (int) ((environmentRoot.position.y - originalEnvironmentRootPos.y) * depthScalePerUnit);
+    public OceanicZone curOceanicZone => oceanicZones[curOceanicZoneIndex];
 
     public float depthScalePerUnit = 1f;
     public Transform environmentRoot;
 
     public List<OceanicZone> oceanicZones;
 
+    [SerializeField] [ReadOnly]
+    private int curOceanicZoneIndex = 0;
+
+    private int curOceanicZoneStartDepth = 0;
+    private int curOceanicZoneEndDepth => curOceanicZoneStartDepth + curOceanicZone.depth;
+
     private Vector3 originalEnvironmentRootPos = Vector3.zero;
 
-    private Dictionary<string, UnderwaterCreatureData>
-        allUnderwaterCreatureData = new Dictionary<string, UnderwaterCreatureData>();
+    private readonly Dictionary<string, UnderwaterCreatureData>
+        _allUnderwaterCreatureData = new Dictionary<string, UnderwaterCreatureData>();
+
+    public event Action onNewOceanicZoneEntered; 
 
     new void Awake()
     {
@@ -27,6 +38,8 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
         }
 
         originalEnvironmentRootPos = environmentRoot.position;
+
+        RefreshAllUnderwaterCreatureData();
     }
 
     // Start is called before the first frame update
@@ -38,6 +51,7 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     void Update()
     {
         UpdateEnvironment();
+        UpdateCurrentZone();
     }
 
     void UpdateEnvironment()
@@ -46,8 +60,42 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
         environmentRoot.position = Vector3.Lerp(environmentRoot.position, targetPos, Time.deltaTime);
     }
 
+    void UpdateCurrentZone()
+    {
+        if (curDepth > curOceanicZoneEndDepth)
+        {
+            if (curOceanicZoneIndex < oceanicZones.Count - 1)
+            {
+                curOceanicZoneStartDepth = curOceanicZoneEndDepth;
+                curOceanicZoneIndex++;
+
+                onNewOceanicZoneEntered?.Invoke();
+            }
+        }
+    }
+
     public void AddToEnvironmentRoot(Transform objTransform)
     {
         objTransform.SetParent(environmentRoot);
+    }
+
+    void RefreshAllUnderwaterCreatureData()
+    {
+        _allUnderwaterCreatureData.Clear();
+
+        var allUnderwaterCreatureList = HelperUtilities.GetAllResources<UnderwaterCreatureData>();
+        foreach (var underwaterCreatureData in allUnderwaterCreatureList)
+        {
+            if (!_allUnderwaterCreatureData.ContainsKey(underwaterCreatureData.ID))
+            {
+                _allUnderwaterCreatureData.Add(underwaterCreatureData.ID, underwaterCreatureData);
+            }
+            else
+            {
+                Debug.LogError($"Duplicate Underwater Creature ID found: {underwaterCreatureData.ID}");
+                Debug.LogError(
+                    $"Conflicting data: {_allUnderwaterCreatureData[underwaterCreatureData.ID].name}, {underwaterCreatureData.name}");
+            }
+        }
     }
 }
