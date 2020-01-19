@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f790b678f462f846a2374f73e56a09b, type: 3}
   m_Name: Underwater Creature Test 1
   m_EditorClassIdentifier: 
+  ID: 4e2f1253-50b9-411c-bfcd-445a6b97cbaa
   description: 
   prefabs:
   - {fileID: 1364982592070929338, guid: 469f17824c2a9c0468325c67524fa229, type: 3}
+  _btnGenerateNewId: 0

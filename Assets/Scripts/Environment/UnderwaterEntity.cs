@@ -26,6 +26,7 @@ public class UnderwaterEntity : EnvironmentEntity
     // Update is called once per frame
     void Update()
     {
+
     }
 
     public void SetMoveDirection(Vector3 dir)
@@ -36,6 +37,7 @@ public class UnderwaterEntity : EnvironmentEntity
         newScale.x = Mathf.Sign(rb2d.velocity.x) * Mathf.Abs(transform.localScale.x);
         transform.localScale = newScale;
 
-        transform.right = rb2d.velocity.normalized * Mathf.Sign(transform.localScale.x);
+        var facingDir = rb2d.velocity.normalized * Mathf.Sign(transform.localScale.x);
+        transform.right = facingDir;
     }
 }

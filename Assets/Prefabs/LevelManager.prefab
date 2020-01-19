@@ -64,7 +64,7 @@ MonoBehaviour:
   spawnAreaPadding:
     left: 0
     right: 0
-    up: 0
-    down: 5
+    up: -5
+    down: 10
     forward: 0
     back: 0

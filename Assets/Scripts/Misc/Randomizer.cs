@@ -11,7 +11,7 @@ public class Randomizer<T>
     
     public Randomizer(List<T> items, bool shuffleOnCreate = true)
     {
-        this.items = items;
+        this.items.AddRange(items);
         if (shuffleOnCreate)
         {
             Shuffle();

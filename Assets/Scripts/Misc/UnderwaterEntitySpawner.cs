@@ -89,10 +89,8 @@ public class UnderwaterEntitySpawner : MonoBehaviour
                 var creaturePrefab = levelManager.curOceanicZone.GetRandomCreatureData().GetRandomPrefab();
                 var underwaterEntity = SpawnObject(creaturePrefab).GetComponent<UnderwaterEntity>();
 
-                var cam = CameraRigManager.Instance.cinemachineBrain.OutputCamera;
-                Vector3 moveDir = cam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f)) -
-                                  underwaterEntity.transform.position;
-                moveDir.y = Random.Range(-creaturesVerticalMovementModifier, creaturesVerticalMovementModifier);
+                Vector3 moveDir = DiverModel.Instance.transform.position - underwaterEntity.transform.position;
+                moveDir.y += Random.Range(-creaturesVerticalMovementModifier, creaturesVerticalMovementModifier);
                 moveDir.z = 0;
 
                 underwaterEntity.SetMoveDirection(moveDir.normalized);

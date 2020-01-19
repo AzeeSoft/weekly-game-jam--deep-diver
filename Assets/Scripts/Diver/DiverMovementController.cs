@@ -10,6 +10,7 @@ public class DiverMovementController : MonoBehaviour
     public float horSpeed = 3f;
     public float vertSpeed = 3f;
     public float yBottomOffset = 1f;
+    public bool flipDirection = false;
 
     private DiverModel diverModel;
 
@@ -53,11 +54,23 @@ public class DiverMovementController : MonoBehaviour
         var dispToFit = diverBounds.DisplacementToFitInside(moveableBounds);
         dispToFit.z = 0;
 
+        float lerpValue = Time.deltaTime;
         if (dispToFit.magnitude > 0)
         {
+            float origMoveDistance = Vector3.Distance(transform.position, targetPos);
             targetPos += dispToFit;
+
+            float newMoveDistance = Vector3.Distance(transform.position, targetPos);
+            lerpValue /= (newMoveDistance / origMoveDistance);
         }
 
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPos, lerpValue);
+
+        if (flipDirection && Mathf.Abs(movement.x) > 0)
+        {
+            var newScale = transform.localScale;
+            newScale.x = -Mathf.Sign(movement.x) * Mathf.Abs(transform.localScale.x);
+            transform.localScale = newScale;
+        }
     }
 }
