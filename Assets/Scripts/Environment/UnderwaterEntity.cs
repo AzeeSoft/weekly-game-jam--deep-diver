@@ -38,6 +38,6 @@ public class UnderwaterEntity : EnvironmentEntity
         transform.localScale = newScale;
 
         var facingDir = rb2d.velocity.normalized * Mathf.Sign(transform.localScale.x);
-        transform.right = facingDir;
+        //transform.right = facingDir;
     }
 }
