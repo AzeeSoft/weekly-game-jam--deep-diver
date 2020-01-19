@@ -31,5 +31,11 @@ public class UnderwaterEntity : EnvironmentEntity
     public void SetMoveDirection(Vector3 dir)
     {
         rb2d.velocity = dir.normalized * (speed + Random.Range(-speedModifier, speedModifier));
+
+        var newScale = transform.localScale;
+        newScale.x = Mathf.Sign(rb2d.velocity.x) * Mathf.Abs(transform.localScale.x);
+        transform.localScale = newScale;
+
+        transform.right = rb2d.velocity.normalized * Mathf.Sign(transform.localScale.x);
     }
 }
