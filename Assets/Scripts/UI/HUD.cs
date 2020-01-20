@@ -17,6 +17,10 @@ public class HUD : MonoBehaviour
     public Image healthBarImage;
     public TextMeshProUGUI coinsText;
 
+    public Image damageIndicatorImage;
+    public float damageIndicatorMaxOpacity = 0.7f;
+    public float damageIndicatorAnimationDuration = 0.3f;
+
     void Awake()
     {
         LevelManager.Instance.onNewOceanicZoneEntered += ShowZoneEnteredScreen;
@@ -25,6 +29,7 @@ public class HUD : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DiverModel.Instance.health.OnDamageTaken.AddListener(IndicateDamage);
     }
 
     // Update is called once per frame
@@ -39,6 +44,7 @@ public class HUD : MonoBehaviour
     void OnDestroy()
     {
         LevelManager.Instance.onNewOceanicZoneEntered -= ShowZoneEnteredScreen;
+        DiverModel.Instance.health.OnDamageTaken.RemoveListener(IndicateDamage);
     }
 
     public void ShowZoneEnteredScreen()
@@ -60,5 +66,19 @@ public class HUD : MonoBehaviour
         hideSequence.AppendCallback(() => { zoneEnteredScreen.SetActive(false); });
 
         preSequence.Play();
+    }
+
+    void IndicateDamage()
+    {
+        damageIndicatorImage.DOKill();
+
+        var tween = damageIndicatorImage.DOFade(damageIndicatorMaxOpacity, damageIndicatorAnimationDuration);
+        tween.OnComplete(() =>
+        {
+            damageIndicatorImage.DOKill();
+            damageIndicatorImage.DOFade(0, damageIndicatorAnimationDuration).Play();
+        });
+
+        tween.Play();
     }
 }
