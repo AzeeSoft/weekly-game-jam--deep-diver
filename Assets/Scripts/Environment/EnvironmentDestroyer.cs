@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnderwaterCreature : UnderwaterEntity
+public class EnvironmentDestroyer : MonoBehaviour
 {
-    public float damage = 10f;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,10 +18,6 @@ public class UnderwaterCreature : UnderwaterEntity
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Diver"))
-        {
-            var diverModel = other.GetComponent<DiverModel>();
-            diverModel.health.TakeDamage(damage);
-        }
+        Destroy(other.gameObject);
     }
 }

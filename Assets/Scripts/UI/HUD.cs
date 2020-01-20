@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class HUD : MonoBehaviour
     public GameObject zoneEnteredScreen;
     public TextMeshProUGUI zoneEnteredText;
 
+    public Image healthBarImage;
     public TextMeshProUGUI coinsText;
 
     void Awake()
@@ -30,6 +32,8 @@ public class HUD : MonoBehaviour
     {
         depthText.text = $"{LevelManager.Instance.curDepth:###,##0} m";
         coinsText.text = $"{DiverModel.Instance.coinsCollected:###,##0}";
+
+        healthBarImage.fillAmount = DiverModel.Instance.health.normalizedHealth;
     }
 
     void OnDestroy()

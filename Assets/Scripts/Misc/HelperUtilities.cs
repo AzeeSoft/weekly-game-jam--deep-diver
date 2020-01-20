@@ -4,6 +4,15 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+[Serializable]
+public class CameraShakeProps
+{
+    public float camShakeDuration = 1f;
+    public float camShakeStrength = 3f;
+    public int camShakeVibrato = 10;
+    public float camShakeRandomness = 90f;
+}
+
 public class HelperUtilities
 {
     public static Vector3 CloneVector3(Vector3 origVector3)

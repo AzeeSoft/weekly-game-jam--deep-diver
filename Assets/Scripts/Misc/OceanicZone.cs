@@ -11,6 +11,7 @@ public class OceanicZone
     public string name;
     public int depth;
     public Color color;
+    public float globalLightIntensity = 1;
     public float globalDiveSpeedModifier = 0;
 
     [Header("Creatures")]

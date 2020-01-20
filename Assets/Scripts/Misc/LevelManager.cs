@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.LWRP;
 
 public class LevelManager : SingletonMonoBehaviour<LevelManager>
 {
@@ -20,18 +21,35 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
         get
         {
             var curZoneColor = curOceanicZone.color;
-            var nextZoneColor = Color.black;
 
             if (hasNextOceanicZone)
             {
-                nextZoneColor = nextOceanicZone.color;
+                var nextZoneColor = nextOceanicZone.color;
+                return Color.Lerp(curZoneColor, nextZoneColor, curZoneProgress);
             }
 
-            return Color.Lerp(curZoneColor, nextZoneColor, curZoneProgress);
+            return curZoneColor;
+        }
+    }
+
+    public float curGlobalLightIntensity
+    {
+        get
+        {
+            var curZoneLightIntensity = curOceanicZone.globalLightIntensity;
+
+            if (hasNextOceanicZone)
+            {
+                var nextZoneLightIntensity = nextOceanicZone.globalLightIntensity;
+                return Mathf.Lerp(curZoneLightIntensity, nextZoneLightIntensity, curZoneProgress);
+            }
+
+            return curZoneLightIntensity;
         }
     }
 
     public float depthScalePerUnit = 1f;
+    public Light2D globalLight2D;
     public Transform environmentRoot;
 
     public List<OceanicZone> oceanicZones;
@@ -73,6 +91,7 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     {
         UpdateEnvironment();
         UpdateCurrentZone();
+        UpdateGlobalLight();
     }
 
     void UpdateEnvironment()
@@ -93,6 +112,11 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
                 onNewOceanicZoneEntered?.Invoke();
             }
         }
+    }
+
+    void UpdateGlobalLight()
+    {
+        globalLight2D.intensity = curGlobalLightIntensity;
     }
 
     public void AddToEnvironmentRoot(Transform objTransform)
