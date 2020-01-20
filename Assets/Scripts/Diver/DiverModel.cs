@@ -6,6 +6,7 @@ using UnityEngine;
 public class DiverModel : SingletonMonoBehaviour<DiverModel>
 {
     public Collider2D collider { get; private set; }
+    public int coinsCollected { get; private set; } = 0;
 
     public float globalDiveSpeed => baseGlobalDiveSpeed + LevelManager.Instance.curOceanicZone.globalDiveSpeedModifier;
 
@@ -40,5 +41,10 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
     void OnNewZoneEntered()
     {
 
+    }
+
+    public void UpdateCoins(int deltaCoins)
+    {
+        coinsCollected += deltaCoins;
     }
 }

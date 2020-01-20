@@ -13,6 +13,8 @@ public class HUD : MonoBehaviour
     public GameObject zoneEnteredScreen;
     public TextMeshProUGUI zoneEnteredText;
 
+    public TextMeshProUGUI coinsText;
+
     void Awake()
     {
         LevelManager.Instance.onNewOceanicZoneEntered += ShowZoneEnteredScreen;
@@ -26,7 +28,8 @@ public class HUD : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        depthText.text = $"{LevelManager.Instance.curDepth:###,###} m";
+        depthText.text = $"{LevelManager.Instance.curDepth:###,##0} m";
+        coinsText.text = $"{DiverModel.Instance.coinsCollected:###,##0}";
     }
 
     void OnDestroy()

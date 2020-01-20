@@ -17,6 +17,8 @@ public class UnderwaterEntitySpawner : MonoBehaviour
     private LevelManager levelManager;
 
     private float nextCreatureSpawnTime = 0;
+    private float nextCoinSpawnTime = 0;
+
     private SpawnArea spawnArea = new SpawnArea();
 
     void Awake()
@@ -50,6 +52,7 @@ public class UnderwaterEntitySpawner : MonoBehaviour
         UpdateSpawnArea();
 
         CheckAndSpawnCreatures();
+        CheckAndSpawnCoins();
     }
 
     void OnDestroy()
@@ -60,6 +63,7 @@ public class UnderwaterEntitySpawner : MonoBehaviour
     void OnNewZoneEntered()
     {
         UpdateNextCreatureSpawnTime();
+        UpdateNextCoinsSpawnTime();
     }
 
     void UpdateNextCreatureSpawnTime()
@@ -67,6 +71,13 @@ public class UnderwaterEntitySpawner : MonoBehaviour
         nextCreatureSpawnTime += levelManager.curOceanicZone.creatureSpawnInterval + Random.Range(
                                      -levelManager.curOceanicZone.creatureSpawnIntervalModifier,
                                      levelManager.curOceanicZone.creatureSpawnIntervalModifier);
+    }
+
+    void UpdateNextCoinsSpawnTime()
+    {
+        nextCoinSpawnTime += levelManager.curOceanicZone.coinSpawnInterval + Random.Range(
+                                     -levelManager.curOceanicZone.coinSpawnIntervalModifier,
+                                     levelManager.curOceanicZone.coinSpawnIntervalModifier);
     }
 
     void UpdateSpawnArea()
@@ -87,7 +98,7 @@ public class UnderwaterEntitySpawner : MonoBehaviour
             for (int i = 0; i < Random.Range(1, Mathf.Max(1, levelManager.curOceanicZone.creatureMaxSpawnCount)); i++)
             {
                 var creaturePrefab = levelManager.curOceanicZone.GetRandomCreatureData().GetRandomPrefab();
-                var underwaterEntity = SpawnObject(creaturePrefab).GetComponent<UnderwaterEntity>();
+                var underwaterEntity = SpawnObject(creaturePrefab).GetComponent<UnderwaterCreature>();
 
                 Vector3 moveDir = DiverModel.Instance.transform.position - underwaterEntity.transform.position;
                 moveDir.y += Random.Range(-creaturesVerticalMovementModifier, creaturesVerticalMovementModifier);
@@ -97,6 +108,20 @@ public class UnderwaterEntitySpawner : MonoBehaviour
             }
 
             UpdateNextCreatureSpawnTime();
+        }
+    }
+
+    void CheckAndSpawnCoins()
+    {
+        if (Time.time > nextCoinSpawnTime)
+        {
+            for (int i = 0; i < Random.Range(1, Mathf.Max(1, levelManager.curOceanicZone.coinsMaxSpawnCount)); i++)
+            {
+                var coinGroupPrefab = levelManager.curOceanicZone.GetRandomCoinGroupPrefab();
+                var coin = SpawnObject(coinGroupPrefab).GetComponent<Coin>();
+            }
+
+            UpdateNextCoinsSpawnTime();
         }
     }
 

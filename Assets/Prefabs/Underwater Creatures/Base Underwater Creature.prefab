@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 4251364832312435337}
   - component: {fileID: 4251364832312435332}
   - component: {fileID: 4251364832312435335}
-  - component: {fileID: 4251364832312435334}
+  - component: {fileID: 5357455739809272290}
   m_Layer: 0
   m_Name: Base Underwater Creature
   m_TagString: Untagged
@@ -112,7 +112,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4251364832312435334
+--- !u!114 &5357455739809272290
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4251364832312435336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea9bb67cbe09f44cb62fd5c50c864d0, type: 3}
+  m_Script: {fileID: 11500000, guid: cc2590ab02487ee4e8e4807ee06f2bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1

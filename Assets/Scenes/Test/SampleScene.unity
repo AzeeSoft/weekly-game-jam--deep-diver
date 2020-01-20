@@ -447,41 +447,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3102890834754272339, guid: 624f95e08bbb9a24bb6f31c596460258,
-        type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
@@ -522,7 +487,7 @@ PrefabInstance:
     - target: {fileID: 318348089889601209, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -10.000002
       objectReference: {fileID: 0}
     - target: {fileID: 318348089889601214, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
@@ -552,7 +517,7 @@ PrefabInstance:
     - target: {fileID: 318348090969192620, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -10.000002
       objectReference: {fileID: 0}
     - target: {fileID: 318348090969192620, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
@@ -673,6 +638,21 @@ PrefabInstance:
         type: 3}
       propertyPath: oceanicZones.Array.data[2].creatures.Array.size
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coinGroupPrefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinGroupPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinGroupPrefabs.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
@@ -860,6 +840,111 @@ PrefabInstance:
       propertyPath: oceanicZones.Array.data[2].globalDiveSpeedModifier
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coinsMaxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coinSpawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coinSpawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coinGroupPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844259299756102621, guid: 8437a1bd14c3ca04ead039fad30657f5,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinsMaxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinSpawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinSpawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinsMaxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinSpawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinSpawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coinGroupPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7903670520567492655, guid: 46bac1375c052494d9d72e54d27a4130,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinGroupPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844259299756102621, guid: 8437a1bd14c3ca04ead039fad30657f5,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinGroupPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7903670520567492655, guid: 46bac1375c052494d9d72e54d27a4130,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinGroupPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 765422722414728790, guid: 99dd741f240fec34880b9d58f59f5e72,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coinGroupPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 627931837767259167, guid: a605189c76877d145b871d1454920bf3,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinGroupPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844259299756102621, guid: 8437a1bd14c3ca04ead039fad30657f5,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinGroupPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7903670520567492655, guid: 46bac1375c052494d9d72e54d27a4130,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinGroupPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 765422722414728790, guid: 99dd741f240fec34880b9d58f59f5e72,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coinGroupPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 627931837767259167, guid: a605189c76877d145b871d1454920bf3,
+        type: 3}
     - target: {fileID: 3615714416937692352, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -893,7 +978,7 @@ PrefabInstance:
     - target: {fileID: 3615714416937692352, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4314398540626840918, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
