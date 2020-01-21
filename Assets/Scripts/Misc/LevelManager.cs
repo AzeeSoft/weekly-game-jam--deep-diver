@@ -4,13 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.LWRP;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : SingletonMonoBehaviour<LevelManager>
 {
     public float globalDiveSpeed => DiverModel.Instance.globalDiveSpeed;
+    public bool hasReachedOceanFloor { get; private set; } = false;
+
     public int curDepth => (int) ((environmentRoot.position.y - originalEnvironmentRootPos.y) * depthScalePerUnit);
+
     public OceanicZone curOceanicZone => oceanicZones[curOceanicZoneIndex];
+    public OceanicZone prevOceanicZone => hasPrevOceanicZone ? oceanicZones[curOceanicZoneIndex - 1] : null;
     public OceanicZone nextOceanicZone => hasNextOceanicZone ? oceanicZones[curOceanicZoneIndex + 1] : null;
+
+    public bool hasPrevOceanicZone => curOceanicZoneIndex > 0;
     public bool hasNextOceanicZone => curOceanicZoneIndex < oceanicZones.Count - 1;
 
     public float curZoneProgress =>
@@ -49,6 +56,7 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     }
 
     public float depthScalePerUnit = 1f;
+    public string mainMenuSceneName = "MainMenu";
     public Light2D globalLight2D;
     public Transform environmentRoot;
 
@@ -64,11 +72,15 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     private readonly Dictionary<string, UnderwaterCreatureData>
         _allUnderwaterCreatureData = new Dictionary<string, UnderwaterCreatureData>();
 
+    public event Action onEndOfCurOceanicZoneReached;
     public event Action onNewOceanicZoneEntered;
+    public event Action onOceanFloorReached;
 
     new void Awake()
     {
         base.Awake();
+
+        Time.timeScale = 1f;
 
         if (!environmentRoot)
         {
@@ -104,6 +116,12 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     {
         if (curDepth > curOceanicZoneEndDepth)
         {
+            if (!curOceanicZone.hasEnded)
+            {
+                curOceanicZone.hasEnded = true;
+                onEndOfCurOceanicZoneReached?.Invoke();
+            }
+
             if (hasNextOceanicZone)
             {
                 curOceanicZoneStartDepth = curOceanicZoneEndDepth;
@@ -142,5 +160,21 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
                     $"Conflicting data: {_allUnderwaterCreatureData[underwaterCreatureData.ID].name}, {underwaterCreatureData.name}");
             }
         }
+    }
+
+    public void OceanFloorReached()
+    {
+        hasReachedOceanFloor = true;
+        onOceanFloorReached?.Invoke();
+    }
+
+    public void RestartCurrentScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }

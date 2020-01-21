@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
@@ -21,15 +22,21 @@ public class HUD : MonoBehaviour
     public float damageIndicatorMaxOpacity = 0.7f;
     public float damageIndicatorAnimationDuration = 0.3f;
 
+    public GameObject winScreen;
+    public GameObject loseScreen;
+    public float screenTransitionDuration = 0.3f;
+
     void Awake()
     {
         LevelManager.Instance.onNewOceanicZoneEntered += ShowZoneEnteredScreen;
+        LevelManager.Instance.onOceanFloorReached += ShowWinScreen;
     }
 
     // Start is called before the first frame update
     void Start()
     {
         DiverModel.Instance.health.OnDamageTaken.AddListener(IndicateDamage);
+        DiverModel.Instance.health.OnHealthDepleted.AddListener(ShowLoseScreen);
     }
 
     // Update is called once per frame
@@ -44,7 +51,9 @@ public class HUD : MonoBehaviour
     void OnDestroy()
     {
         LevelManager.Instance.onNewOceanicZoneEntered -= ShowZoneEnteredScreen;
+        LevelManager.Instance.onOceanFloorReached -= ShowWinScreen;
         DiverModel.Instance.health.OnDamageTaken.RemoveListener(IndicateDamage);
+        DiverModel.Instance.health.OnHealthDepleted.RemoveListener(ShowLoseScreen);
     }
 
     public void ShowZoneEnteredScreen()
@@ -80,5 +89,37 @@ public class HUD : MonoBehaviour
         });
 
         tween.Play();
+    }
+
+    public void PlayAgain()
+    {
+        LevelManager.Instance.RestartCurrentScene();
+    }
+
+    public void GoToMainMenu()
+    {
+        LevelManager.Instance.GoToMainMenu();
+    }
+
+    void ShowWinScreen()
+    {
+        ShowScreen(winScreen);
+        Time.timeScale = 0f;
+    }
+
+    void ShowLoseScreen()
+    {
+        ShowScreen(loseScreen);
+        Time.timeScale = 0f;
+    }
+
+    void ShowScreen(GameObject screen)
+    {
+        /*screen.DOFade(0, 0).AppendCallback(() =>
+        {
+            screen.SetActive(true);
+            screen.DOFade(1, screenTransitionDuration).Play();
+        }).Play();*/
+        screen.SetActive(true);
     }
 }

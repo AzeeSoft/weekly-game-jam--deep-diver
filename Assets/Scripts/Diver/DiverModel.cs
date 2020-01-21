@@ -10,7 +10,9 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
     public Collider2D collider { get; private set; }
     public int coinsCollected { get; private set; } = 0;
 
-    public float globalDiveSpeed => baseGlobalDiveSpeed + LevelManager.Instance.curOceanicZone.globalDiveSpeedModifier;
+    public float globalDiveSpeed => LevelManager.Instance.hasReachedOceanFloor
+        ? 0
+        : baseGlobalDiveSpeed + LevelManager.Instance.curOceanicZone.globalDiveSpeedModifier;
 
     public GameObject flashlight;
 
@@ -27,6 +29,7 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
         collider = GetComponent<Collider2D>();
 
         LevelManager.Instance.onNewOceanicZoneEntered += OnNewZoneEntered;
+        LevelManager.Instance.onOceanFloorReached += OnOceanFloorReached;
     }
 
     // Start is called before the first frame update
@@ -51,10 +54,16 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
     void OnDestroy()
     {
         LevelManager.Instance.onNewOceanicZoneEntered -= OnNewZoneEntered;
+        LevelManager.Instance.onOceanFloorReached -= OnOceanFloorReached;
     }
 
     void OnNewZoneEntered()
     {
+    }
+
+    void OnOceanFloorReached()
+    {
+
     }
 
     public void UpdateCoins(int deltaCoins)
@@ -65,5 +74,10 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
     void UpdateFlashlight()
     {
         flashlight.SetActive(LevelManager.Instance.globalLight2D.intensity <= flashlightMaxGlobalLightIntensity);
+    }
+
+    public void FoundDeepSeaMysteryObject(DeepSeaMysteryEntity deepSeaMysteryEntity)
+    {
+        LevelManager.Instance.OceanFloorReached();
     }
 }

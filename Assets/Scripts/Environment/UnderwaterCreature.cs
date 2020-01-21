@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UnderwaterCreature : UnderwaterEntity
+public class UnderwaterCreature : UnderwaterRigidbodyEntity
 {
     public float damage = 10f;
 

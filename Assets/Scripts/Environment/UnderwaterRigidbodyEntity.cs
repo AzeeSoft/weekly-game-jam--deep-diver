@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class UnderwaterEntity : EnvironmentEntity
+public class UnderwaterRigidbodyEntity : EnvironmentEntity
 {
     public Rigidbody2D rb2d { get; private set; }
 
