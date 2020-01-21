@@ -12,6 +12,8 @@ public class HUD : MonoBehaviour
     public bool isPaused => Time.timeScale <= 0;
 
     public TextMeshProUGUI depthText;
+    public TextMeshProUGUI zoneText;
+    public Slider zoneProgressSlider;
 
     public float zoneEnteredScreenDisplayDuration = 2f;
     public float zoneEnteredScreenFadeDuration = 1f;
@@ -48,6 +50,8 @@ public class HUD : MonoBehaviour
     void Update()
     {
         depthText.text = $"{LevelManager.Instance.curDepth:###,##0} m";
+        zoneText.text = LevelManager.Instance.curOceanicZone.name;
+        zoneProgressSlider.value = LevelManager.Instance.curZoneProgress;
         coinsText.text = $"{DiverModel.Instance.coinsCollected:###,##0}";
 
         healthBarImage.fillAmount = DiverModel.Instance.health.normalizedHealth;
@@ -92,7 +96,10 @@ public class HUD : MonoBehaviour
             showSequence.Play();
         });
 
-        showSequence.AppendCallback(() => { this.WaitAndExecute(() => { hideSequence.Play(); }, zoneEnteredScreenDisplayDuration); });
+        showSequence.AppendCallback(() =>
+        {
+            this.WaitAndExecute(() => { hideSequence.Play(); }, zoneEnteredScreenDisplayDuration);
+        });
 
         hideSequence.AppendCallback(() => { zoneEnteredScreen.SetActive(false); });
 
@@ -131,8 +138,7 @@ public class HUD : MonoBehaviour
 
     public void Resume()
     {
-        HideScreen(pauseScreen);
-        Time.timeScale = 1;
+        HideScreen(pauseScreen, () => { Time.timeScale = 1; });
     }
 
     void ShowWinScreen()
@@ -173,10 +179,7 @@ public class HUD : MonoBehaviour
             callback?.Invoke();
         });
 
-        preSeq.AppendCallback(() =>
-        {
-            fadeOutSeq.Play();
-        });
+        preSeq.AppendCallback(() => { fadeOutSeq.Play(); });
         preSeq.Play();
     }
 }
