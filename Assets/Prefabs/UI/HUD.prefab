@@ -772,7 +772,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 100
 --- !u!114 &1073396711057809072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2685,7 +2685,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 100
 --- !u!114 &7335347511038457165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3075,11 +3075,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
         type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
@@ -3172,21 +3167,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.11859204
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.38679248
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.3589128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 591026a30f2e84349a2e0a01e6765663, type: 3}
@@ -3275,11 +3255,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
         type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
@@ -3315,36 +3290,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
         type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
       propertyPath: m_text
       value: try again
       objectReference: {fileID: 0}
@@ -3377,21 +3322,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.11859204
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.38679248
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.3589128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 591026a30f2e84349a2e0a01e6765663, type: 3}
@@ -3477,11 +3407,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 290
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
         type: 3}
@@ -3578,21 +3503,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.11859204
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.38679248
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.3589128
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 591026a30f2e84349a2e0a01e6765663, type: 3}
 --- !u!224 &7467139874735160112 stripped
@@ -3680,11 +3590,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
         type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 1079886927247706286, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
@@ -3718,11 +3623,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Play Again
       objectReference: {fileID: 0}
-    - target: {fileID: 1781552384071094040, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_fontStyle
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8267834629148914022, guid: 591026a30f2e84349a2e0a01e6765663,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -3752,21 +3652,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.r
-      value: 0.11859204
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.38679248
-      objectReference: {fileID: 0}
-    - target: {fileID: 8424289883562540350, guid: 591026a30f2e84349a2e0a01e6765663,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.3589128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 591026a30f2e84349a2e0a01e6765663, type: 3}

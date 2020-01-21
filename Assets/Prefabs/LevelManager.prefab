@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b343d536466d78742a38d060321d813a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  depthScalePerUnit: 100
+  depthScalePerUnit: 10
+  mainMenuSceneName: MainMenu
+  globalLight2D: {fileID: 0}
   environmentRoot: {fileID: 0}
   oceanicZones: []
   curOceanicZoneIndex: 0
