@@ -22,6 +22,8 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
 
     public CameraShakeProps cameraShakeProps;
 
+    private float _origFlashlightIntensity = 1;
+
     new void Awake()
     {
         base.Awake();
@@ -30,6 +32,7 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
 
         LevelManager.Instance.onNewOceanicZoneEntered += OnNewZoneEntered;
         LevelManager.Instance.onOceanFloorReached += OnOceanFloorReached;
+
     }
 
     // Start is called before the first frame update

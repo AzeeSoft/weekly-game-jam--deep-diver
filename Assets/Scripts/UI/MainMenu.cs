@@ -27,10 +27,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.WaitAndExecute(() =>
-        {
-            ShowGraphicObject(title, titleFadeDuration);
-        }, titleFadeDelay);
+        this.WaitAndExecute(() => { ShowGraphicObject(title, titleFadeDuration); }, titleFadeDelay);
     }
 
     // Update is called once per frame
@@ -59,15 +56,18 @@ public class MainMenu : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(playLevelName);
+        ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(playLevelName); });
     }
 
     public void Exit()
     {
+        ScreenFader.Instance.FadeOut(-1, () =>
+        {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+            UnityEditor.EditorApplication.isPlaying = false;
 #endif
 
-        Application.Quit();
+            Application.Quit();
+        });
     }
 }

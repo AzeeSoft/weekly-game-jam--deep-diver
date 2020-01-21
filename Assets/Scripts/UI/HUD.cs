@@ -122,12 +122,12 @@ public class HUD : MonoBehaviour
 
     public void PlayAgain()
     {
-        LevelManager.Instance.RestartCurrentScene();
+        ScreenFader.Instance.FadeOut(-1, () => { LevelManager.Instance.RestartCurrentScene(); });
     }
 
     public void GoToMainMenu()
     {
-        LevelManager.Instance.GoToMainMenu();
+        ScreenFader.Instance.FadeOut(-1, () => { LevelManager.Instance.GoToMainMenu(); });
     }
 
     public void Pause()
