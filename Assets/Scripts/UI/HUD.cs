@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
@@ -8,6 +9,8 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    public bool isPaused => Time.timeScale <= 0;
+
     public TextMeshProUGUI depthText;
 
     public float zoneEnteredScreenDisplayDuration = 2f;
@@ -25,6 +28,8 @@ public class HUD : MonoBehaviour
     public GameObject winScreen;
     public GameObject loseScreen;
     public float screenTransitionDuration = 0.3f;
+
+    public GameObject pauseScreen;
 
     void Awake()
     {
@@ -46,6 +51,18 @@ public class HUD : MonoBehaviour
         coinsText.text = $"{DiverModel.Instance.coinsCollected:###,##0}";
 
         healthBarImage.fillAmount = DiverModel.Instance.health.normalizedHealth;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
     }
 
     void OnDestroy()
@@ -106,6 +123,18 @@ public class HUD : MonoBehaviour
         LevelManager.Instance.GoToMainMenu();
     }
 
+    public void Pause()
+    {
+        ShowScreen(pauseScreen);
+        Time.timeScale = 0;
+    }
+
+    public void Resume()
+    {
+        HideScreen(pauseScreen);
+        Time.timeScale = 1;
+    }
+
     void ShowWinScreen()
     {
         ShowScreen(winScreen);
@@ -127,6 +156,26 @@ public class HUD : MonoBehaviour
         {
             screen.SetActive(true);
             fadeInSeq.Play();
+        });
+        preSeq.Play();
+    }
+
+    void HideScreen(GameObject screen, Action callback = null)
+    {
+        screen.SetActive(true);
+
+        var preSeq = screen.DOFade(1, 0);
+        var fadeOutSeq = screen.DOFade(0f, screenTransitionDuration);
+
+        fadeOutSeq.AppendCallback(() =>
+        {
+            screen.SetActive(false);
+            callback?.Invoke();
+        });
+
+        preSeq.AppendCallback(() =>
+        {
+            fadeOutSeq.Play();
         });
         preSeq.Play();
     }
