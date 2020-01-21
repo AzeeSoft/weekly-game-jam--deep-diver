@@ -47,15 +47,25 @@ public static class HelperExtensions
     #endregion
 
     #region GameObject
-    
+
     public static Sequence DOFade(this GameObject obj, float endValue, float duration)
     {
         Sequence mySequence = DOTween.Sequence();
+        mySequence.SetUpdate(true);
 
         List<Graphic> graphics = new List<Graphic>(obj.GetComponentsInChildren<Graphic>(true));
         foreach (var graphic in graphics)
         {
-            var graphicTween = graphic.DOFade(endValue, duration);
+            float remappedEndValue = endValue;
+            var graphicFadeHelper = graphic.GetComponent<GraphicFadeHelper>();
+            if (graphicFadeHelper && graphicFadeHelper.enabled)
+            {
+                graphicFadeHelper.RefreshIfNeeded();
+                remappedEndValue = HelperUtilities.Remap(endValue, 0, 1, graphicFadeHelper.minOpacity,
+                    graphicFadeHelper.maxOpacity);
+            }
+
+            var graphicTween = graphic.DOFade(remappedEndValue, duration);
             mySequence.PrependCallback(() => graphic.DOKill()).Insert(0, graphicTween);
         }
 
@@ -122,7 +132,7 @@ public static class HelperExtensions
 
     #region Bounds
 
-    public static BoundSides GetSides(this Bounds obj, bool includePosition = true) 
+    public static BoundSides GetSides(this Bounds obj, bool includePosition = true)
     {
         return new BoundSides()
         {

@@ -1345,6 +1345,7 @@ MonoBehaviour:
   damageIndicatorAnimationDuration: 0.25
   winScreen: {fileID: 8228395275344467360}
   loseScreen: {fileID: 386473258801128257}
+  screenTransitionDuration: 0.6
 --- !u!1 &4085651550390651746
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,6 +1429,7 @@ GameObject:
   - component: {fileID: 6933477195172020352}
   - component: {fileID: 1199822006329479085}
   - component: {fileID: 2678773085610736072}
+  - component: {fileID: 2589414204016565076}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1491,6 +1493,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2589414204016565076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4654917050213110696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e957ae559577647940b555d3ca78d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minOpacity: 0
+  maxOpacity: 0
+  useStartingOpacityAsMin: 0
+  useStartingOpacityAsMax: 1
 --- !u!1 &4899957904084477205
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +2753,7 @@ GameObject:
   - component: {fileID: 2310980097378250833}
   - component: {fileID: 1613687394375470217}
   - component: {fileID: 1828810415767262787}
+  - component: {fileID: 6088177634273412079}
   m_Layer: 5
   m_Name: BG
   m_TagString: Untagged
@@ -2797,6 +2816,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6088177634273412079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8343795108864109431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e957ae559577647940b555d3ca78d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minOpacity: 0
+  maxOpacity: 0.3
+  useStartingOpacityAsMin: 0
+  useStartingOpacityAsMax: 1
 --- !u!1 &8750731967119274328
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,6 +2843,7 @@ GameObject:
   - component: {fileID: 8118723710762132432}
   - component: {fileID: 5064630402492272996}
   - component: {fileID: 6319865470462861100}
+  - component: {fileID: 6789654387941973202}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -2871,6 +2907,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6789654387941973202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8750731967119274328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3e957ae559577647940b555d3ca78d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minOpacity: 0
+  maxOpacity: 0
+  useStartingOpacityAsMin: 0
+  useStartingOpacityAsMax: 1
 --- !u!1 &8966597399700863085
 GameObject:
   m_ObjectHideFlags: 0

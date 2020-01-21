@@ -115,11 +115,14 @@ public class HUD : MonoBehaviour
 
     void ShowScreen(GameObject screen)
     {
-        /*screen.DOFade(0, 0).AppendCallback(() =>
+        var preSeq = screen.DOFade(0, 0);
+        var fadeInSeq = screen.DOFade(1f, screenTransitionDuration);
+
+        preSeq.AppendCallback(() =>
         {
             screen.SetActive(true);
-            screen.DOFade(1, screenTransitionDuration).Play();
-        }).Play();*/
-        screen.SetActive(true);
+            fadeInSeq.Play();
+        });
+        preSeq.Play();
     }
 }

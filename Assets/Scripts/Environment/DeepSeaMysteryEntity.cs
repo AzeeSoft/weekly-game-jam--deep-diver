@@ -16,12 +16,16 @@ public class DeepSeaMysteryEntity : EnvironmentEntity
 
     void LateUpdate()
     {
-        var colliderBottom = collider2D.bounds.GetSides().down.y;
-        var camBoundsBottom = CameraRigManager.Instance.cinemachineBrain.OutputCamera.ViewportToWorldPoint(new Vector3(0, 0)).y;
-
-        if (colliderBottom > camBoundsBottom)
+        if (Time.timeScale > 0)
         {
-            transform.position += Vector3.down * (colliderBottom - camBoundsBottom);
+            var colliderBottom = collider2D.bounds.GetSides().down.y;
+            var camBoundsBottom = CameraRigManager.Instance.cinemachineBrain.OutputCamera
+                .ViewportToWorldPoint(new Vector3(0, 0)).y;
+
+            if (colliderBottom > camBoundsBottom)
+            {
+                transform.position += Vector3.down * (colliderBottom - camBoundsBottom);
+            }
         }
     }
 
