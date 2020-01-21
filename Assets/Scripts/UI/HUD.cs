@@ -58,6 +58,11 @@ public class HUD : MonoBehaviour
 
     public void ShowZoneEnteredScreen()
     {
+        if (LevelManager.Instance.curOceanicZone.name.Length <= 0)
+        {
+            return;
+        }
+
         zoneEnteredText.text = LevelManager.Instance.curOceanicZone.name;
 
         var preSequence = zoneEnteredScreen.DOFade(0, 0);
