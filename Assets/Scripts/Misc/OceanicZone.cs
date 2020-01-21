@@ -21,24 +21,24 @@ public class OceanicZone
     [Header("Creatures")] public int creatureMaxSpawnCount = 1;
     public float creatureSpawnInterval = 3;
     public float creatureSpawnIntervalModifier = 1;
-    public List<UnderwaterCreatureData> creatures;
+    public List<GameObject> creaturePrefabs;
 
     [Header("Coins")] public int coinsMaxSpawnCount = 1;
     public float coinSpawnInterval = 3;
     public float coinSpawnIntervalModifier = 1;
     public List<GameObject> coinGroupPrefabs;
 
-    private Randomizer<UnderwaterCreatureData> creatureRandomizer = null;
+    private Randomizer<GameObject> creaturePrefabsRandomizer = null;
     private Randomizer<GameObject> coinGroupPrefabsRandomizer = null;
 
-    public UnderwaterCreatureData GetRandomCreatureData()
+    public GameObject GetRandomCreaturePrefab()
     {
-        if (creatureRandomizer == null)
+        if (creaturePrefabsRandomizer == null)
         {
-            creatureRandomizer = new Randomizer<UnderwaterCreatureData>(creatures);
+            creaturePrefabsRandomizer = new Randomizer<GameObject>(creaturePrefabs);
         }
 
-        return creatureRandomizer.GetRandomItem();
+        return creaturePrefabsRandomizer.GetRandomItem();
     }
 
     public GameObject GetRandomCoinGroupPrefab()

@@ -401,7 +401,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashlight: {fileID: 4187699163136415810}
   baseGlobalDiveSpeed: 1
-  flashlightMaxGlobalLightIntensity: 0.5
+  flashlightMaxGlobalLightIntensity: 0.4
   cameraShakeProps:
     camShakeDuration: 1
     camShakeStrength: 0.3

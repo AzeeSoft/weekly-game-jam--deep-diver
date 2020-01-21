@@ -123,7 +123,7 @@ public class UnderwaterEntitySpawner : MonoBehaviour
                     levelManager.curOceanicZone.creatureMaxSpawnCount);
                 i++)
             {
-                var creaturePrefab = levelManager.curOceanicZone.GetRandomCreatureData().GetRandomPrefab();
+                var creaturePrefab = levelManager.curOceanicZone.GetRandomCreaturePrefab();
                 var underwaterEntity = SpawnObject(creaturePrefab).GetComponent<UnderwaterCreature>();
 
                 Vector3 moveDir = DiverModel.Instance.transform.position - underwaterEntity.transform.position;
