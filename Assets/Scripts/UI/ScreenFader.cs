@@ -35,10 +35,16 @@ public class ScreenFader : SingletonMonoBehaviour<ScreenFader>
         if (duration < 0)
             duration = defaultFadeDuration;
 
+        fadeImage.gameObject.SetActive(true);
+
         fadeImage.DOKill();
         fadeImage.DOFade(1, 0).SetUpdate(true).OnComplete(() =>
         {
-            fadeImage.DOFade(0, duration).SetUpdate(true).OnComplete(callback).Play();
+            fadeImage.DOFade(0, duration).SetUpdate(true).OnComplete(() =>
+            {
+                fadeImage.gameObject.SetActive(false);
+                callback?.Invoke();
+            }).Play();
         }).Play();
     }
 
@@ -48,8 +54,9 @@ public class ScreenFader : SingletonMonoBehaviour<ScreenFader>
             duration = defaultFadeDuration;
 
         fadeImage.DOKill();
-        fadeImage.DOFade(0, 1).SetUpdate(true).OnComplete(() =>
+        fadeImage.DOFade(0, 0).SetUpdate(true).OnComplete(() =>
         {
+            fadeImage.gameObject.SetActive(true);
             fadeImage.DOFade(1, duration).SetUpdate(true).OnComplete(callback).Play();
         }).Play();
     }
