@@ -1179,17 +1179,17 @@ PrefabInstance:
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: oceanicZones.Array.data[0].color.r
-      value: 0.18783373
+      value: 0.07529369
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: oceanicZones.Array.data[0].color.g
-      value: 0.41885486
+      value: 0.33962262
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: oceanicZones.Array.data[0].color.b
-      value: 0.6320754
+      value: 0.33962262
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}

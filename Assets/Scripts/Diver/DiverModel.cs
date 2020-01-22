@@ -25,6 +25,7 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
     public float shieldFadeDuration = 3f;
 
     public CameraShakeProps cameraShakeProps;
+    public AudioClip hitSound;
 
     private float _origFlashlightIntensity = 1;
 
@@ -46,6 +47,8 @@ public class DiverModel : SingletonMonoBehaviour<DiverModel>
     {
         health.OnDamageTaken.AddListener(() =>
         {
+            SoundEffectsManager.Instance.Play(hitSound);
+
             var tween = CameraRigManager.Instance.cinemachineBrain.ActiveVirtualCamera.VirtualCameraGameObject.transform
                 .DOShakePosition(
                     cameraShakeProps.camShakeDuration, cameraShakeProps.camShakeStrength,

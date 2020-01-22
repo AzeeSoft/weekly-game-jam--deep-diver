@@ -11,6 +11,7 @@ public class PowerUp : MonoBehaviour
     {
     }
 
+    public AudioClip powerUpSound;
     public PowerUpEvent onPowerUpPicked;
 
     // Start is called before the first frame update
@@ -29,6 +30,7 @@ public class PowerUp : MonoBehaviour
         {
             var diverModel = other.GetComponent<DiverModel>();
             onPowerUpPicked?.Invoke(diverModel);
+            SoundEffectsManager.Instance.Play(powerUpSound);
             Destroy(gameObject);
         }
     }

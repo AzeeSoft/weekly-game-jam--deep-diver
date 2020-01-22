@@ -57,6 +57,11 @@ PrefabInstance:
       propertyPath: onPowerUpPicked.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5548136579276430223, guid: 83d175bd3f1c974468f8a72c9f22e6f7,
+        type: 3}
+      propertyPath: powerUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b3df98aac516d1c4fbd957fdfdebe0e1, type: 3}
     - target: {fileID: 6740776115279665605, guid: 83d175bd3f1c974468f8a72c9f22e6f7,
         type: 3}
       propertyPath: m_Name

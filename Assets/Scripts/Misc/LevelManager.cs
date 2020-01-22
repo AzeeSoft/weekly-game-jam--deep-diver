@@ -59,6 +59,7 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
     public string mainMenuSceneName = "MainMenu";
     public Light2D globalLight2D;
     public Transform environmentRoot;
+    public AudioClip newOceanicZoneSound;
 
     public List<OceanicZone> oceanicZones;
 
@@ -128,6 +129,8 @@ public class LevelManager : SingletonMonoBehaviour<LevelManager>
                 curOceanicZoneIndex++;
 
                 onNewOceanicZoneEntered?.Invoke();
+
+                SoundEffectsManager.Instance.Play(newOceanicZoneSound);
             }
         }
     }

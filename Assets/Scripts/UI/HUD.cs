@@ -29,14 +29,18 @@ public class HUD : MonoBehaviour
 
     public GameObject winScreen;
     public GameObject loseScreen;
+    public float delayBeforeWinScreen = 3f;
     public float screenTransitionDuration = 0.3f;
+
+    public AudioClip winSound;
+    public AudioClip loseSound;
 
     public GameObject pauseScreen;
 
     void Awake()
     {
         LevelManager.Instance.onNewOceanicZoneEntered += ShowZoneEnteredScreen;
-        LevelManager.Instance.onOceanFloorReached += ShowWinScreen;
+        LevelManager.Instance.onOceanFloorReached += WaitAndShowWinScreen;
     }
 
     // Start is called before the first frame update
@@ -72,7 +76,7 @@ public class HUD : MonoBehaviour
     void OnDestroy()
     {
         LevelManager.Instance.onNewOceanicZoneEntered -= ShowZoneEnteredScreen;
-        LevelManager.Instance.onOceanFloorReached -= ShowWinScreen;
+        LevelManager.Instance.onOceanFloorReached -= WaitAndShowWinScreen;
         DiverModel.Instance.health.OnDamageTaken.RemoveListener(IndicateDamage);
         DiverModel.Instance.health.OnHealthDepleted.RemoveListener(ShowLoseScreen);
     }
@@ -141,14 +145,21 @@ public class HUD : MonoBehaviour
         HideScreen(pauseScreen, () => { Time.timeScale = 1; });
     }
 
+    void WaitAndShowWinScreen()
+    {
+        this.WaitAndExecute(ShowWinScreen, delayBeforeWinScreen);
+    }
+
     void ShowWinScreen()
     {
+        SoundEffectsManager.Instance.Play(winSound);
         ShowScreen(winScreen);
         Time.timeScale = 0f;
     }
 
     void ShowLoseScreen()
     {
+        SoundEffectsManager.Instance.Play(loseSound);
         ShowScreen(loseScreen);
         Time.timeScale = 0f;
     }

@@ -18,6 +18,11 @@ public class EnvironmentDestroyer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.GetComponent<DeepSeaMysteryEntity>() != null)
+        {
+            return;
+        }
+
         Destroy(other.gameObject);
     }
 }

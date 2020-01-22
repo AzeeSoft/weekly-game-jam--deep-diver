@@ -8,11 +8,13 @@ public class DeepSeaMysteryEntity : EnvironmentEntity
 
     private Collider2D collider2D;
 
+    private bool readyToBeFound = false;
+    private bool found = false;
+
     new void Awake()
     {
         base.Awake();
         collider2D = GetComponent<Collider2D>();
-        collider2D.enabled = false;
     }
 
     void LateUpdate()
@@ -26,17 +28,19 @@ public class DeepSeaMysteryEntity : EnvironmentEntity
             if (colliderBottom >= camBoundsBottom)
             {
                 transform.position += Vector3.down * (colliderBottom - camBoundsBottom);
-                collider2D.enabled = true;
+                readyToBeFound = true;
             }
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Diver"))
+        if (!found && readyToBeFound && other.CompareTag("Diver"))
         {
             var diverModel = other.GetComponent<DiverModel>();
             diverModel.FoundDeepSeaMysteryObject(this);
+
+            found = true;
         }
     }
 }

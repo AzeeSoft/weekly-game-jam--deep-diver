@@ -2681,7 +2681,10 @@ MonoBehaviour:
   damageIndicatorAnimationDuration: 0.25
   winScreen: {fileID: 8228395275344467360}
   loseScreen: {fileID: 386473258801128257}
+  delayBeforeWinScreen: 3
   screenTransitionDuration: 0.6
+  winSound: {fileID: 8300000, guid: 6836aa4ffb5805b4c94a4e8b2e9cc730, type: 3}
+  loseSound: {fileID: 8300000, guid: 501e3e23e2779954a8f60abbfd266ec1, type: 3}
   pauseScreen: {fileID: 8321391571151616021}
 --- !u!1 &4085651550390651746
 GameObject:
@@ -5465,6 +5468,7 @@ GameObject:
   - component: {fileID: 6584507242278681776}
   - component: {fileID: 1912897575435808227}
   - component: {fileID: 7404040551327529907}
+  - component: {fileID: 5776521841594237150}
   m_Layer: 5
   m_Name: Pause Button
   m_TagString: Untagged
@@ -5582,6 +5586,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5776521841594237150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8383048534812022385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104834cf8948ab04d9c4993d5b45f2c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonPressClip: {fileID: 8300000, guid: c49c779a8fa4f234cbf492267c0d1ca0, type: 3}
 --- !u!1 &8630043558331683226
 GameObject:
   m_ObjectHideFlags: 0

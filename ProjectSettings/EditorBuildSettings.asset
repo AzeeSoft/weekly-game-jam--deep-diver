@@ -9,19 +9,19 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 0e34873fc3556414491f7020f3f8ef51
   - enabled: 1
-    path: Assets/Scenes/StoryModes/Atlantic Ocean 1.unity
+    path: Assets/Scenes/Missions/Atlantic Ocean 1.unity
     guid: bc2695e49437e424cbb54a4b87530a2b
   - enabled: 1
-    path: Assets/Scenes/StoryModes/Atlantic Ocean 2.unity
+    path: Assets/Scenes/Missions/Atlantic Ocean 2.unity
     guid: ff803bb0c2c3f474db481d44a914b708
   - enabled: 1
-    path: Assets/Scenes/StoryModes/Bermuda Triangle.unity
+    path: Assets/Scenes/Missions/Bermuda Triangle.unity
     guid: 9abfd1dd707a69e49a0e848586855825
   - enabled: 1
-    path: Assets/Scenes/StoryModes/Carribean Sea.unity
+    path: Assets/Scenes/Missions/Carribean Sea.unity
     guid: eb188981336fea4449cb1228ad042881
   - enabled: 1
-    path: Assets/Scenes/StoryModes/Quindao Lake.unity
+    path: Assets/Scenes/Missions/Quindao Lake.unity
     guid: 34c602a80a4a9e847b7120ccb4f87099
   - enabled: 1
     path: Assets/Scenes/EndlessDiver.unity

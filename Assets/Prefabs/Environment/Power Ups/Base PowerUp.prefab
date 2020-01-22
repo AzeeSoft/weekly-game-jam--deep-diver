@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthToAdd: 10
-  shieldDuration: 15
+  shieldDuration: 8
 --- !u!114 &4623900237884493580
 MonoBehaviour:
   m_ObjectHideFlags: 0

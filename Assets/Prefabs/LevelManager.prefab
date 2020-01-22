@@ -48,6 +48,7 @@ MonoBehaviour:
   mainMenuSceneName: MainMenu
   globalLight2D: {fileID: 0}
   environmentRoot: {fileID: 0}
+  newOceanicZoneSound: {fileID: 8300000, guid: e40ec8b8c0bfb3d41b22b36cb9ae43fa, type: 3}
   oceanicZones: []
   curOceanicZoneIndex: 0
 --- !u!114 &1418971433515536459

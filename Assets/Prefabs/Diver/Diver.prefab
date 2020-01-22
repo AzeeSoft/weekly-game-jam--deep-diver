@@ -491,6 +491,7 @@ MonoBehaviour:
     camShakeStrength: 0.3
     camShakeVibrato: 20
     camShakeRandomness: 90
+  hitSound: {fileID: 8300000, guid: 747c89f421154c541b90fec3611f52f0, type: 3}
 --- !u!114 &3402475053728381300
 MonoBehaviour:
   m_ObjectHideFlags: 0

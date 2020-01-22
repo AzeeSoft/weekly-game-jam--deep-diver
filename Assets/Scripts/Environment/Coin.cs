@@ -8,6 +8,8 @@ public class Coin : MonoBehaviour
     public int value = 100;
     public float moveDuration = 1f;
 
+    public AudioClip coinSound;
+
     private bool isActive = true;
 
     // Start is called before the first frame update
@@ -47,6 +49,7 @@ public class Coin : MonoBehaviour
 
     void OnCoinCollected(DiverModel diverModel)
     {
+        SoundEffectsManager.Instance.Play(coinSound);
         diverModel.UpdateCoins(value);
 
         Destroy(gameObject);
