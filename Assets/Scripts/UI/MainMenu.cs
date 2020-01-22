@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public string playLevelName = "SampleScene";
+    public string endlessSceneName = "EndlessDiver";
 
     public GameObject title;
     public GameObject menu;
@@ -54,9 +54,14 @@ public class MainMenu : MonoBehaviour
         }).Play();
     }
 
-    public void Play()
+    public void PlayEndlessLevel()
     {
-        ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(playLevelName); });
+        GoToScene(endlessSceneName);
+    }
+
+    public void GoToScene(string sceneName)
+    {
+        ScreenFader.Instance.FadeOut(-1, () => { SceneManager.LoadScene(sceneName); });
     }
 
     public void Exit()

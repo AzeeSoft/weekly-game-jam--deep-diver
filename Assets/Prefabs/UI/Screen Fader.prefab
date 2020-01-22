@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 1018494383278153624}
   fadeInOnAwake: 1
-  defaultFadeDuration: 3
+  defaultFadeDuration: 2
 --- !u!1 &1018494383278153626
 GameObject:
   m_ObjectHideFlags: 0

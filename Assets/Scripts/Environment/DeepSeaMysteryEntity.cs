@@ -8,10 +8,11 @@ public class DeepSeaMysteryEntity : EnvironmentEntity
 
     private Collider2D collider2D;
 
-    // Start is called before the first frame update
-    void Start()
+    new void Awake()
     {
+        base.Awake();
         collider2D = GetComponent<Collider2D>();
+        collider2D.enabled = false;
     }
 
     void LateUpdate()
@@ -22,9 +23,10 @@ public class DeepSeaMysteryEntity : EnvironmentEntity
             var camBoundsBottom = CameraRigManager.Instance.cinemachineBrain.OutputCamera
                 .ViewportToWorldPoint(new Vector3(0, 0)).y;
 
-            if (colliderBottom > camBoundsBottom)
+            if (colliderBottom >= camBoundsBottom)
             {
                 transform.position += Vector3.down * (colliderBottom - camBoundsBottom);
+                collider2D.enabled = true;
             }
         }
     }
