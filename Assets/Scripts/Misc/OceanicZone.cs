@@ -8,6 +8,27 @@ using UnityEngine;
 [Serializable]
 public class OceanicZone
 {
+    [Serializable]
+    public class SpawnableEntity
+    {
+        public int maxSpawnCount = 1;
+        public float spawnInterval = 3;
+        public float spawnIntervalModifier = 1;
+        public List<GameObject> prefabs;
+
+        private Randomizer<GameObject> prefabsRandomizer = null;
+
+        public GameObject GetRandomPrefab()
+        {
+            if (prefabsRandomizer == null)
+            {
+                prefabsRandomizer = new Randomizer<GameObject>(prefabs);
+            }
+
+            return prefabsRandomizer.GetRandomItem();
+        }
+    }
+
     public string name;
     public int depth;
     public Color color;
@@ -18,36 +39,7 @@ public class OceanicZone
 
     public GameObject endOfZoneObjectPrefab;
 
-    [Header("Creatures")] public int creatureMaxSpawnCount = 1;
-    public float creatureSpawnInterval = 3;
-    public float creatureSpawnIntervalModifier = 1;
-    public List<GameObject> creaturePrefabs;
-
-    [Header("Coins")] public int coinsMaxSpawnCount = 1;
-    public float coinSpawnInterval = 3;
-    public float coinSpawnIntervalModifier = 1;
-    public List<GameObject> coinGroupPrefabs;
-
-    private Randomizer<GameObject> creaturePrefabsRandomizer = null;
-    private Randomizer<GameObject> coinGroupPrefabsRandomizer = null;
-
-    public GameObject GetRandomCreaturePrefab()
-    {
-        if (creaturePrefabsRandomizer == null)
-        {
-            creaturePrefabsRandomizer = new Randomizer<GameObject>(creaturePrefabs);
-        }
-
-        return creaturePrefabsRandomizer.GetRandomItem();
-    }
-
-    public GameObject GetRandomCoinGroupPrefab()
-    {
-        if (coinGroupPrefabsRandomizer == null)
-        {
-            coinGroupPrefabsRandomizer = new Randomizer<GameObject>(coinGroupPrefabs);
-        }
-
-        return coinGroupPrefabsRandomizer.GetRandomItem();
-    }
+    public SpawnableEntity creatures;
+    public SpawnableEntity coins;
+    public SpawnableEntity powerUps;
 }

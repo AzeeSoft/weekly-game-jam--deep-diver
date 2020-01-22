@@ -269,7 +269,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0.15625, z: 0.03515625, w: -0.0390625}
+  m_BoundingSphereOverride: {x: -4.337735e-19, y: 4194304, z: 1.504633e-36, w: 0.0000019073486}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -834,6 +834,61 @@ PrefabInstance:
         type: 3}
       propertyPath: oceanicZones.Array.data[3].creaturePrefabs.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.prefabs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.prefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.prefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.prefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coins.prefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coins.prefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.prefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.prefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].powerUps.prefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].powerUps.prefabs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].powerUps.prefabs.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
@@ -1438,6 +1493,441 @@ PrefabInstance:
       propertyPath: depthScalePerUnit
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.spawnInterval
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.spawnIntervalModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coins.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coins.spawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coins.spawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].powerUps.maxSpawnCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].powerUps.spawnInterval
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].powerUps.spawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.maxSpawnCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.spawnInterval
+      value: 2.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.spawnIntervalModifier
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coins.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coins.spawnInterval
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coins.spawnIntervalModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].powerUps.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].powerUps.spawnInterval
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].powerUps.spawnIntervalModifier
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.maxSpawnCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.spawnInterval
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.spawnIntervalModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.spawnInterval
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.spawnIntervalModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].powerUps.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].powerUps.spawnInterval
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].powerUps.spawnIntervalModifier
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.maxSpawnCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.spawnInterval
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.spawnIntervalModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.spawnInterval
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.spawnIntervalModifier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].powerUps.maxSpawnCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].powerUps.spawnInterval
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].powerUps.spawnIntervalModifier
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].creatures.maxSpawnCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].creatures.spawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].creatures.spawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].coins.maxSpawnCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].coins.spawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].coins.spawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].powerUps.maxSpawnCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].powerUps.spawnInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[4].powerUps.spawnIntervalModifier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1364982592070929338, guid: 469f17824c2a9c0468325c67524fa229,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 3227575485919450730, guid: a986876d55f18814abc32f5ac15c6286,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].creatures.prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 7145034985210909453, guid: b4166de95ed86954f870f8e4682f76e3,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1364982592070929338, guid: 469f17824c2a9c0468325c67524fa229,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7145034985210909453, guid: b4166de95ed86954f870f8e4682f76e3,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 3227575485919450730, guid: a986876d55f18814abc32f5ac15c6286,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 3865138258712208067, guid: eb87eb6e7880e4745b2c04bac70d289f,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].creatures.prefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 6902653635054958418, guid: 412c5d58ccff9154daa55a7775bf3fc9,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2920448975967660135, guid: 61c82c276cea93f4680c1ce09d72e16d,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 6902653635054958418, guid: 412c5d58ccff9154daa55a7775bf3fc9,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 3865138258712208067, guid: eb87eb6e7880e4745b2c04bac70d289f,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 4802928120020106942, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].creatures.prefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 633907962779787888, guid: 667bc280a93728c48a110e86b4ac7ca0,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2920448975967660135, guid: 61c82c276cea93f4680c1ce09d72e16d,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 633907962779787888, guid: 667bc280a93728c48a110e86b4ac7ca0,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 4130183267188028865, guid: 01e2b5e57f8484049a1048015c494d89,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 6902653635054958418, guid: 412c5d58ccff9154daa55a7775bf3fc9,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].creatures.prefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 4802928120020106942, guid: 44d664017a6bdbb4ea02b0c5bf4cc856,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coins.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844259299756102621, guid: 8437a1bd14c3ca04ead039fad30657f5,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[0].coins.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7903670520567492655, guid: 46bac1375c052494d9d72e54d27a4130,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coins.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844259299756102621, guid: 8437a1bd14c3ca04ead039fad30657f5,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].coins.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7903670520567492655, guid: 46bac1375c052494d9d72e54d27a4130,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844259299756102621, guid: 8437a1bd14c3ca04ead039fad30657f5,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7903670520567492655, guid: 46bac1375c052494d9d72e54d27a4130,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 765422722414728790, guid: 99dd741f240fec34880b9d58f59f5e72,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].coins.prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 627931837767259167, guid: a605189c76877d145b871d1454920bf3,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 2844259299756102621, guid: 8437a1bd14c3ca04ead039fad30657f5,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 7903670520567492655, guid: 46bac1375c052494d9d72e54d27a4130,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.prefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 765422722414728790, guid: 99dd741f240fec34880b9d58f59f5e72,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].coins.prefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 627931837767259167, guid: a605189c76877d145b871d1454920bf3,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[1].powerUps.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4833090669694487161, guid: 332638978edb1a34499a614293150665,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].powerUps.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4833090669694487161, guid: 332638978edb1a34499a614293150665,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].powerUps.prefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 4833090669694487161, guid: 332638978edb1a34499a614293150665,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[3].powerUps.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 116940710263610095, guid: 71088a7867242c84e94a8efb8309ede4,
+        type: 3}
+    - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
+        type: 3}
+      propertyPath: oceanicZones.Array.data[2].powerUps.prefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 116940710263610095, guid: 71088a7867242c84e94a8efb8309ede4,
+        type: 3}
     - target: {fileID: 3744404157406140077, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: m_textInfo.characterCount

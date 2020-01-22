@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class UnderwaterEntitySpawner : MonoBehaviour
 {
@@ -13,13 +15,38 @@ public class UnderwaterEntitySpawner : MonoBehaviour
         public Vector3 center => (topLeft + bottomRight) / 2f;
     }
 
+    public class SpawnableEntityTimer
+    {
+        public float nextSpawnTime { get; private set; } = 0;
+
+        private readonly Func<OceanicZone.SpawnableEntity> _getSpawnableEntity;
+
+        public SpawnableEntityTimer(Func<OceanicZone.SpawnableEntity> callback)
+        {
+            _getSpawnableEntity = callback;
+        }
+
+        public void UpdateNextSpawnTime()
+        {
+            var spawnableEntity = _getSpawnableEntity?.Invoke();
+
+            if (spawnableEntity != null)
+            {
+                nextSpawnTime = Time.time + spawnableEntity.spawnInterval + Random.Range(
+                                    -spawnableEntity.spawnIntervalModifier,
+                                    spawnableEntity.spawnIntervalModifier);
+            }
+        }
+    }
+
     public float creaturesVerticalMovementModifier = 0.3f;
     public Sides spawnAreaPadding;
 
     private LevelManager levelManager;
 
-    private float nextCreatureSpawnTime = 0;
-    private float nextCoinSpawnTime = 0;
+    private SpawnableEntityTimer creatureSpawnTimer;
+    private SpawnableEntityTimer coinSpawnTimer;
+    private SpawnableEntityTimer powerUpSpawnTimer;
 
     private SpawnArea spawnArea = new SpawnArea();
 
@@ -28,6 +55,10 @@ public class UnderwaterEntitySpawner : MonoBehaviour
         levelManager = LevelManager.Instance;
         levelManager.onNewOceanicZoneEntered += OnNewZoneEntered;
         levelManager.onEndOfCurOceanicZoneReached += OnEndOfCurOceanicZoneReached;
+
+        creatureSpawnTimer = new SpawnableEntityTimer(() => levelManager.curOceanicZone.creatures);
+        coinSpawnTimer = new SpawnableEntityTimer(() => levelManager.curOceanicZone.coins);
+        powerUpSpawnTimer = new SpawnableEntityTimer(() => levelManager.curOceanicZone.powerUps);
     }
 
     // Start is called before the first frame update
@@ -59,6 +90,7 @@ public class UnderwaterEntitySpawner : MonoBehaviour
 
         CheckAndSpawnCreatures();
         CheckAndSpawnCoins();
+        CheckAndSpawnPowerUps();
     }
 
     void OnDestroy()
@@ -69,27 +101,14 @@ public class UnderwaterEntitySpawner : MonoBehaviour
 
     void OnNewZoneEntered()
     {
-        UpdateNextCreatureSpawnTime();
-        UpdateNextCoinsSpawnTime();
+        creatureSpawnTimer.UpdateNextSpawnTime();
+        coinSpawnTimer.UpdateNextSpawnTime();
+        powerUpSpawnTimer.UpdateNextSpawnTime();
     }
 
     void OnEndOfCurOceanicZoneReached()
     {
         SpawnEndOfZoneObject(levelManager.curOceanicZone);
-    }
-
-    void UpdateNextCreatureSpawnTime()
-    {
-        nextCreatureSpawnTime = Time.time + levelManager.curOceanicZone.creatureSpawnInterval + Random.Range(
-                                     -levelManager.curOceanicZone.creatureSpawnIntervalModifier,
-                                     levelManager.curOceanicZone.creatureSpawnIntervalModifier);
-    }
-
-    void UpdateNextCoinsSpawnTime()
-    {
-        nextCoinSpawnTime = Time.time + levelManager.curOceanicZone.coinSpawnInterval + Random.Range(
-                                 -levelManager.curOceanicZone.coinSpawnIntervalModifier,
-                                 levelManager.curOceanicZone.coinSpawnIntervalModifier);
     }
 
     void UpdateSpawnArea()
@@ -116,14 +135,14 @@ public class UnderwaterEntitySpawner : MonoBehaviour
 
     void CheckAndSpawnCreatures()
     {
-        if (Time.time > nextCreatureSpawnTime)
+        if (Time.time > creatureSpawnTimer.nextSpawnTime)
         {
             for (int i = 0;
-                i < Random.Range(Mathf.Min(1, levelManager.curOceanicZone.creatureMaxSpawnCount),
-                    levelManager.curOceanicZone.creatureMaxSpawnCount);
+                i < Random.Range(Mathf.Min(1, levelManager.curOceanicZone.creatures.maxSpawnCount),
+                    levelManager.curOceanicZone.creatures.maxSpawnCount);
                 i++)
             {
-                var creaturePrefab = levelManager.curOceanicZone.GetRandomCreaturePrefab();
+                var creaturePrefab = levelManager.curOceanicZone.creatures.GetRandomPrefab();
                 var underwaterEntity = SpawnObject(creaturePrefab).GetComponent<UnderwaterCreature>();
 
                 Vector3 moveDir = DiverModel.Instance.transform.position - underwaterEntity.transform.position;
@@ -133,24 +152,41 @@ public class UnderwaterEntitySpawner : MonoBehaviour
                 underwaterEntity.SetMoveDirection(moveDir.normalized);
             }
 
-            UpdateNextCreatureSpawnTime();
+            creatureSpawnTimer.UpdateNextSpawnTime();
         }
     }
 
     void CheckAndSpawnCoins()
     {
-        if (Time.time > nextCoinSpawnTime)
+        if (Time.time > coinSpawnTimer.nextSpawnTime)
         {
             for (int i = 0;
-                i < Random.Range(Mathf.Min(1, levelManager.curOceanicZone.creatureMaxSpawnCount),
-                    levelManager.curOceanicZone.coinsMaxSpawnCount);
+                i < Random.Range(Mathf.Min(1, levelManager.curOceanicZone.coins.maxSpawnCount),
+                    levelManager.curOceanicZone.coins.maxSpawnCount);
                 i++)
             {
-                var coinGroupPrefab = levelManager.curOceanicZone.GetRandomCoinGroupPrefab();
+                var coinGroupPrefab = levelManager.curOceanicZone.coins.GetRandomPrefab();
                 var coin = SpawnObject(coinGroupPrefab).GetComponent<Coin>();
             }
 
-            UpdateNextCoinsSpawnTime();
+            coinSpawnTimer.UpdateNextSpawnTime();
+        }
+    }
+
+    void CheckAndSpawnPowerUps()
+    {
+        if (Time.time > powerUpSpawnTimer.nextSpawnTime)
+        {
+            for (int i = 0;
+                i < Random.Range(Mathf.Min(1, levelManager.curOceanicZone.powerUps.maxSpawnCount),
+                    levelManager.curOceanicZone.powerUps.maxSpawnCount);
+                i++)
+            {
+                var powerUpPrefab = levelManager.curOceanicZone.powerUps.GetRandomPrefab();
+                var powerUp = SpawnObject(powerUpPrefab).GetComponent<PowerUp>();
+            }
+
+            powerUpSpawnTimer.UpdateNextSpawnTime();
         }
     }
 

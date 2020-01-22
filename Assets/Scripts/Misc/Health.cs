@@ -13,6 +13,7 @@ public class Health : MonoBehaviour
     public float timeSinceLastDamage => Time.time - timeOfLastDamage;
 
     public bool startWithMaxHealth = true;
+    public bool canTakeDamage = true;
 
     public UnityEvent OnDamageTaken;
     public UnityEvent OnHealthDepleted;
@@ -38,14 +39,23 @@ public class Health : MonoBehaviour
 
     public void UpdateHealth(float updateAmount)
     {
+        if (updateAmount < 0 && !canTakeDamage)
+        {
+            return;
+        }
+
         currentHealth += updateAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        if (updateAmount < 0)
+        {
+            OnDamageTaken?.Invoke();
+            timeOfLastDamage = Time.time;
+        }
     }
 
     public void TakeDamage(float damage)
     {
         UpdateHealth(-damage);
-        OnDamageTaken?.Invoke();
-        timeOfLastDamage = Time.time;
     }
 }
