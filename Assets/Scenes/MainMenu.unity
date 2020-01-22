@@ -4117,7 +4117,7 @@ PrefabInstance:
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
       propertyPath: oceanicZones.Array.data[0].depth
-      value: 135
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3615714416827288068, guid: b576395f1e02b534587db050c99ab82e,
         type: 3}
@@ -6455,7 +6455,7 @@ MonoBehaviour:
   title: {fileID: 1671626852}
   menu: {fileID: 946048511}
   titleFadeDuration: 10
-  titleFadeDelay: 4.5
+  titleFadeDelay: 3
   menuFadeDuration: 2
 --- !u!1 &1671626852
 GameObject:
