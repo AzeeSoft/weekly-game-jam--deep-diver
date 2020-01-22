@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &578309820845035326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2211346877644705268}
+  - component: {fileID: 7032710358994499773}
+  m_Layer: 0
+  m_Name: LeanTouch
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2211346877644705268
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578309820845035326}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3615714415257408976}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7032710358994499773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578309820845035326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fc98219a83dff145947365dc914d06e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TapThreshold: 0.2
+  SwipeThreshold: 100
+  ReferenceDpi: 200
+  GuiLayers:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  RecordFingers: 1
+  RecordThreshold: 1
+  RecordLimit: 1
+  SimulateMultiFingers: 0
+  PinchTwistKey: 306
+  MovePivotKey: 308
+  MultiDragKey: 308
+  FingerTexture: {fileID: 2800000, guid: 25c48be3a87ea0f489a6d41c9c9a2194, type: 3}
 --- !u!1 &3615714415257408979
 GameObject:
   m_ObjectHideFlags: 0
@@ -34,6 +91,7 @@ Transform:
   - {fileID: 3724326848518294538}
   - {fileID: 3615714416937692352}
   - {fileID: 4248676818170780352}
+  - {fileID: 2211346877644705268}
   - {fileID: 3604832199875553203}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,7 +156,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3615714415257408976}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6542508217696317966
 MonoBehaviour:
@@ -464,6 +522,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3145188446571262666}
   m_PrefabAsset: {fileID: 0}
+--- !u!20 &318348089889601214 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3444985282724742260, guid: 5cf2ed233b4ce0c47ac6a43f7a40dc9f,
+    type: 3}
+  m_PrefabInstance: {fileID: 3145188446571262666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6548401872109135601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -738,6 +802,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Diver
       objectReference: {fileID: 0}
+    - target: {fileID: 5716427684289834256, guid: 45e1444fe715b3d438e85bd8c2410095,
+        type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 318348089889601214}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45e1444fe715b3d438e85bd8c2410095, type: 3}
 --- !u!4 &3615714416937692352 stripped

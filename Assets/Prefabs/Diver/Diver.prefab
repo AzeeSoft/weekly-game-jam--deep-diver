@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 1133025065540218568}
   - component: {fileID: 3402475053728381300}
   - component: {fileID: 3834237744887606051}
+  - component: {fileID: 5716427684289834256}
   m_Layer: 9
   m_Name: Diver
   m_TagString: Diver
@@ -528,6 +529,27 @@ MonoBehaviour:
   OnHealthDepleted:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &5716427684289834256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4755508385060286438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4eda371e5375f454490a86f21559ee38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Use:
+    Filter: 0
+    IgnoreStartedOverGui: 1
+    RequiredFingerCount: 0
+    RequiredMouseButtons: 0
+    RequiredSelectable: {fileID: 0}
+  Camera: {fileID: 0}
+  Dampening: 3
+  remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &4755508385423266600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1489,15 +1511,9 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 304143212420625999, guid: 3c215af4243d98645925f92db41e1ea5,
     type: 3}
---- !u!4 &1997303028109423013 stripped
+--- !u!4 &4400664118897519140 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7143710564666985792, guid: 3c215af4243d98645925f92db41e1ea5,
-    type: 3}
-  m_PrefabInstance: {fileID: 8688664608370097381}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &6132728115732627585 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -5940382221656179612, guid: 3c215af4243d98645925f92db41e1ea5,
+  m_CorrespondingSourceObject: {fileID: 5009721176496920257, guid: 3c215af4243d98645925f92db41e1ea5,
     type: 3}
   m_PrefabInstance: {fileID: 8688664608370097381}
   m_PrefabAsset: {fileID: 0}
@@ -1513,9 +1529,9 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8688664608370097381}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &4400664118897519140 stripped
+--- !u!4 &1997303028109423013 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5009721176496920257, guid: 3c215af4243d98645925f92db41e1ea5,
+  m_CorrespondingSourceObject: {fileID: 7143710564666985792, guid: 3c215af4243d98645925f92db41e1ea5,
     type: 3}
   m_PrefabInstance: {fileID: 8688664608370097381}
   m_PrefabAsset: {fileID: 0}
@@ -1546,6 +1562,12 @@ Transform:
 --- !u!4 &8533402918657685258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1078870304219401199, guid: 3c215af4243d98645925f92db41e1ea5,
+    type: 3}
+  m_PrefabInstance: {fileID: 8688664608370097381}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6132728115732627585 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5940382221656179612, guid: 3c215af4243d98645925f92db41e1ea5,
     type: 3}
   m_PrefabInstance: {fileID: 8688664608370097381}
   m_PrefabAsset: {fileID: 0}

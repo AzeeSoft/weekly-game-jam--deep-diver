@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1018494382911736329}
   - component: {fileID: 1018494382911736328}
   - component: {fileID: 1018494382911736375}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Screen Fader
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 1018494383278153627}
   - component: {fileID: 1018494383278153625}
   - component: {fileID: 1018494383278153624}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

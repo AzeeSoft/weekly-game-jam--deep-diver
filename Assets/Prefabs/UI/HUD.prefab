@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 16113991748151422}
   - component: {fileID: 4105741736858456643}
   - component: {fileID: 972171471178468612}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2285,7 +2285,7 @@ GameObject:
   - component: {fileID: 725663145153586441}
   - component: {fileID: 3178603167982567920}
   - component: {fileID: 2240135998676165012}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2891,7 +2891,7 @@ GameObject:
   - component: {fileID: 6548644087924864765}
   - component: {fileID: 1917660752329363499}
   - component: {fileID: 1681026138494625428}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Line (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3121,7 +3121,7 @@ GameObject:
   - component: {fileID: 4794369081300133041}
   - component: {fileID: 1322904393159223782}
   - component: {fileID: 5811540028027419988}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Line (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3192,7 +3192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1496728868787854611}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3389,7 +3389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5196627212079504874}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Oceanic Zone Entered Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4133,7 +4133,7 @@ GameObject:
   - component: {fileID: 1613687394375470217}
   - component: {fileID: 1828810415767262787}
   - component: {fileID: 6088177634273412079}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4598,7 +4598,7 @@ GameObject:
   - component: {fileID: 7658202862133495751}
   - component: {fileID: 2140306753545972076}
   - component: {fileID: 6510893206423782547}
-  m_Layer: 5
+  m_Layer: 2
   m_Name: Line (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

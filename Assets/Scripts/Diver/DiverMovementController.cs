@@ -31,6 +31,24 @@ public class DiverMovementController : MonoBehaviour
         Move();        
     }
 
+    void LateUpdate()
+    {
+        var diverBounds = diverModel.collider.bounds;
+        var moveableBounds = CameraRigManager.Instance.cinemachineBrain.OutputCamera.OrthographicBounds();
+
+        var newExtents = moveableBounds.extents;
+        newExtents.y -= yBottomOffset / 2f;
+        var newCenter = moveableBounds.center;
+        newCenter.y += yBottomOffset / 2f;
+        moveableBounds.extents = newExtents;
+        moveableBounds.center = newCenter;
+
+        var dispToFit = diverBounds.DisplacementToFitInside(moveableBounds);
+        dispToFit.z = 0;
+
+        transform.position += dispToFit;
+    }
+
     void Move()
     {
         float x = Input.GetAxis("Horizontal");
