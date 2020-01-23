@@ -549,7 +549,7 @@ MonoBehaviour:
     RequiredMouseButtons: 0
     RequiredSelectable: {fileID: 0}
   Camera: {fileID: 0}
-  Dampening: 3
+  Dampening: 10
   remainingTranslation: {x: 0, y: 0, z: 0}
 --- !u!1 &4755508385423266600
 GameObject:
